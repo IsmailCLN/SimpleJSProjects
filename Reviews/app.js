@@ -51,7 +51,7 @@ function showPerson() {
   author.textContent = item.name;
   job.textContent = item.job;
   info.textContent = item.text;
-}
+};
 
 //Next Button
 nextButton.addEventListener("click", function () {
@@ -60,7 +60,7 @@ nextButton.addEventListener("click", function () {
     currentItem = 0;
   }
   showPerson();
-})
+});
 //Previous Button
 prevButton.addEventListener("click", function () {
   currentItem--;
@@ -68,4 +68,9 @@ prevButton.addEventListener("click", function () {
     currentItem = reviews.length - 1;
   }
   showPerson();
-})
+});
+
+randomButton.addEventListener("click", function () {
+  currentItem = Math.floor(Math.random() * reviews.length);
+  showPerson();
+});
